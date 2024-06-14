@@ -20,19 +20,20 @@
     <title>Document</title>
 </head>
 
-<body class="font-Poppins">
-    <header>
-        <nav class="mx-auto py-2 bg-red-600">
+<body class="relative font-Poppins">
+    <!-- navigasi bar -->
+    <header class="fixed top-0 w-full z-50 bg-slate-600/60 hover:bg-slate-600/80 hover:font-bold">
+        <nav class="mx-auto py-2">
             <div class="container flex items-center justify-between sm:mx-auto text-white">
                 <div class="flex items-center font-bold text-2xl">
                     <img src="/public/img/logo.svg" class="size-10" alt="">
                     <a href="#" class="px-2">Paroki Roh Kudus</a>
                 </div>
                 <div class="hidden space-x-6 md:flex">
-                    <a href="#" class=" hover:text-red-700">Sejarah</a>
-                    <a href="#" class=" hover:text-red-700">Romo dan Diakon</a>
-                    <a href="#" class=" hover:text-red-700">Agenda</a>
-                    <a href="#" class=" hover:text-red-700">Kontak</a>
+                    <a href="#" class=" hover:text-black">Sejarah</a>
+                    <a href="#" class=" hover:text-black">Romo dan Diakon</a>
+                    <a href="#" class=" hover:text-black">Agenda</a>
+                    <a href="#" class=" hover:text-black">Kontak</a>
                 </div>
                 <!-- hamburger icon -->
                 <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
@@ -43,10 +44,10 @@
             </div>
             <div class="md:hidden">
                 <div id="menu" class="flex-col items-center hidden text-white">
-                    <a href="#" class=" hover:text-red-700 py-2">Sejarah</a>
-                    <a href="#" class=" hover:text-red-700 py-2">Romo dan Diakon</a>
-                    <a href="#" class=" hover:text-red-700 py-2">Agenda</a>
-                    <a href="#" class=" hover:text-red-700 py-2">Kontak</a>
+                    <a href="#" class=" hover:text-black">Sejarah</a>
+                    <a href="#" class=" hover:text-black">Romo dan Diakon</a>
+                    <a href="#" class=" hover:text-black">Agenda</a>
+                    <a href="#" class=" hover:text-black">Kontak</a>
                 </div>
             </div>
         </nav>
@@ -101,7 +102,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-red-100">
+    <section class="bg-slate-400/10">
         <div class="container">
             <div class="flex flex-col items-center py-20 gap-10 md:flex-row-reverse md:py-12">
                 <div class="flex flex-col md:w-2/5">
