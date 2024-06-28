@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google Maps -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="js/map.js"></script>
+
+    <!-- css untuk tailwind paling bawah -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- animate on scroll AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- script jquery, cdn slick carousel dan css cdn untuk slick paling atas -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
@@ -15,14 +26,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- css untuk tailwind paling bawah -->
     <link rel="stylesheet" href="./css/style.css">
+
+
     <title>Document</title>
 </head>
 
 <body class="relative font-Poppins">
     <!-- navigasi bar -->
-    <header class="fixed top-0 w-full z-50 bg-slate-600/60 hover:bg-slate-600/80 hover:font-bold">
+    <header class="fixed top-0 w-full z-50 bg-slate-600/80">
         <nav class="mx-auto py-2">
             <div class="container flex items-center justify-between sm:mx-auto text-white">
                 <div class="flex items-center font-bold text-2xl">
@@ -30,10 +49,10 @@
                     <a href="#" class="px-2">Paroki Roh Kudus</a>
                 </div>
                 <div class="hidden space-x-6 md:flex">
-                    <a href="#" class=" hover:text-black">Sejarah</a>
+                    <a href="#" class=" hover:text-white hover:font-bold">Sejarah</a>
                     <a href="#" class=" hover:text-black">Romo dan Diakon</a>
                     <a href="#" class=" hover:text-black">Agenda</a>
-                    <a href="#" class=" hover:text-black">Kontak</a>
+                    <a href="contact.html" class=" hover:text-black">Kontak</a>
                 </div>
                 <!-- hamburger icon -->
                 <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
@@ -42,7 +61,7 @@
                     <span class="hamburger-bottom"></span>
                 </button>
             </div>
-            <div class="md:hidden">
+            <div id="animatedButton" class="md:hidden ">
                 <div id="menu" class="flex-col items-center hidden text-white">
                     <a href="#" class=" hover:text-black">Sejarah</a>
                     <a href="#" class=" hover:text-black">Romo dan Diakon</a>
@@ -61,9 +80,11 @@
     </section>
     <section>
         <div class="container">
-            <div class="flex flex-col items-center py-10 mb-8 gap-10 md:flex-row">
-                <div class="flex-col md:w-4/6">
-                    <img src="img/slider2.jpg" alt="">
+            <div class="flex flex-col-reverse items-center py-10 mb-8 gap-10 md:flex-row">
+                <div class="flex-col md:w-4/6 group">
+                    <div data-aos="fade-up-right" data-aos-duration="1000" class="flex-col md:w-4/6">
+                        <img cla src="img/slider2.jpg" alt="">
+                    </div>
                 </div>
                 <div class="md:w-2/6 w-full">
                     <h1
@@ -104,8 +125,8 @@
     </section>
     <section class="bg-slate-400/10">
         <div class="container">
-            <div class="flex flex-col items-center py-20 gap-10 md:flex-row-reverse md:py-12">
-                <div class="flex flex-col md:w-2/5">
+            <div class="flex flex-col-reverse items-center py-20 gap-10 md:flex-row-reverse md:py-12">
+                <div data-aos="fade-up-left" data-aos-duration="1000" class="flex flex-col md:w-2/5">
                     <img src="img/slider1.jpg" alt="">
                 </div>
                 <div class="flex-col md:w-3/5">
@@ -184,28 +205,28 @@
             <div class="mx-auto">
                 <h1 class="font-bold text-center text-4xl">Daftar Pastor</h1>
                 <div class="flex flex-col md:flex-row gap-3 text-center">
-                    <div
+                    <div data-aos="flip-left" data-aos-duration="1000"
                         class="flex flex-col items-center p-6 space-y-6 rounded-lg md:mt-28 bg-white border-gray-200  md:border-4 md:w-1/4 ">
                         <img src="img/RPThomas.jpg" class="rounded-full size-4/5 md:-mt-28 md:size-auto" alt="" />
                         <h5 class="font-semibold">
                             RP Thomas Bani, SVD
                         </h5>
                     </div>
-                    <div
+                    <div data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000"
                         class="flex flex-col items-center p-6 space-y-6 rounded-lg md:mt-28 bg-white border-gray-200 md:border-4 md:w-1/4">
                         <img src="img/RPYoseph.jpg" class="rounded-full size-4/5 md:-mt-28 md:size-auto" alt="" />
                         <h5 class="font-semibold">
                             RP Yoseph Jaga Dawan, SVD
                         </h5>
                     </div>
-                    <div
+                    <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000"
                         class="flex flex-col items-center p-6 space-y-6 rounded-lg md:mt-28 bg-white border-gray-200 md:border-4 md:w-1/4">
                         <img src="img/RPAnton.jpg" class="rounded-full size-4/5 md:-mt-28 md:size-auto" alt="" />
                         <h5 class="font-semibold">
                             RP Yohanes Antonius Lelaona, SVD
                         </h5>
                     </div>
-                    <div
+                    <div data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000"
                         class="flex flex-col items-center p-6 space-y-6 rounded-lg md:mt-28 bg-white border-gray-200 md:border-4 md:w-1/4">
                         <img src="img/RDYose.jpg" class="rounded-full size-4/5 md:-mt-28 md:size-auto" alt="" />
                         <h5 class="font-semibold">
@@ -214,13 +235,132 @@
                     </div>
                 </div>
             </div>
-    </section>
-    <section>
-        <div class="bg-slate-500 py-20">
-
         </div>
     </section>
+    <footer data-aos="fade-up">
+        <div class="bg-slate-500 py-20">
+            <div class="container flex-row md:flex-col">
+                <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 text-white ">
+                    <div class="flex flex-col text-center w-full md:w-1/3 md:text-left">
+                        <a href="#" class="hover:text-gray-950">Sejarah</a>
+                        <a href="#" class="hover:text-gray-950">Romo dan Diakon</a>
+                        <a href="#" class="hover:text-gray-950">Agenda</a>
+                        <a href="#" class="hover:text-gray-950">Kontak</a>
+                    </div>
+                    <div class="flex-col text-center py-5 w-full md:w-1/3 md:py-0">
+                        <p class="">
+                            Alamat:
+                        </p>
+                        <p>
+                            Jl. I Gusti Ngurah Rai 97
+                            Perum. Purimas, Surabaya
+                        </p>
+                        <p>
+                            031-8792426
+                        </p>
+                        <div class="flex-col text-3xl pt-4">
+                            <i class="cursor-pointer fa-brands fa-instagram"></i>
+                            <i class="cursor-pointer fa-brands fa-youtube"></i>
+                            <i class="cursor-pointer fa-brands fa-whatsapp"></i>
+                        </div>
+                    </div>
 
+                    <div class="flex flex-col  md:w-1/3 md:pl-10 pl-0 text-black">
+                        <!-- "flex-col items-end w-full md:w-1/3 text-1xl"> -->
+                        <p class="text-white">Kritik dan saran</p>
+                        <!-- <form name="formValidation" id="formValidation" action="index.html" class="flex-row"> -->
+                        <!-- <div class="py-1">
+                                <input type="text" name="nama" placeholder="Nama"
+                                    class="peer focus:outline-none flex-1 px-3 py-1 rounded-md w-full" required/>
+                                <span
+                                    class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                                    Silahkan masukkan nama Anda
+                                </span>
+                            </div>
+                            <div class="py-1">
+                                <input type="email" name="email" placeholder="Email"
+                                    class="focus:outline-none flex-1 px-3 py-1 rounded-md w-full" required>
+                            </div>
+                            <div class="py-1">
+                                <input type="text" name="phone" placeholder="Nomor Hp"
+                                    class="focus:outline-none flex-1 px-3 py-1 rounded-md w-full" required>
+                            </div>
+                            <div class="py-1">
+                                <input type="text" name="subject" placeholder="Subject" class="focus:outline-none flex-1 px-3 py-1 rounded-md w-full">
+                            </div> -->
+                        <!-- <div class="py-1">
+                                <textarea name="formMessage" placeholder="Kritik dan saran" id=""
+                                    class="focus:outline-none flex-1 px-3 py-1 rounded-md w-full" required></textarea>
+                            </div>
+                            <input type="submit" value="Submit"
+                                class="btn bg-slate-700 rounded-md text-white py-2 px-4 hover:bg-slate-950"></input> -->
+                        <form class="flex flex-col items-start gap-1" id="user-form">
+                            <div class="flex flex-col gap-2">
+                                <input type="text" id="username" placeholder="Nama"
+                                    class="border-2 border-gray-300 rounded-lg px-3 py-1 w-60 focus:outline-none"
+                                    required />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <input type="email" id="email" placeholder="Email"
+                                    class="border-2 border-gray-300 rounded-lg px-3 py-1 w-60 focus:outline-none"
+                                    required />
+                                <div id="email-error" class="hidden text-white text-xs">
+                                    invalid Email
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="relative">
+                                    <input type="number" id="phone" placeholder="Nomor Hp"
+                                        class="border-2 border-gray-300 rounded-lg px-3 py-1 w-60 focus:outline-none"
+                                        required />
+                                </div>
+                                <div id="phone-error" class="hidden text-white text-xs">
+                                    Nomor HP lebih dari 9 angka
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="relative">
+                                    <input type="text" id="kritiksaran" placeholder="Kritik dan Saran"
+                                        class="text-black border-2 border-gray-300 rounded-lg px-3 py-1 w-60 focus:outline-none"
+                                        required></input>
+                                </div>
+                                <div id="kritiksaran-error" class="hidden text-white text-xs">
+                                    Wajib diisi
+                                </div>
+                            </div>
+                            <div class="flex justify-center">
+                                <input type="submit" value="submit" id="submit"
+                                    class="px-4 py-1 rounded-lg border-0 text-white bg-slate-700 cursor-pointer" />
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-slate-600 text-white">
+            copyright &copy 2024, All Right Reserved
+        </div>
+    </footer>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- jquery form validation  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script> -->
+
+    <!-- google maps api -->
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyC4QoFbvEzULOV4LRS7iMmQdWMGLv1AVSo", v: "weekly" });</script>
+
+    <!-- script animate on scroll AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- script di tailwind -->
     <script src="js/script.js"></script>
 
 </body>
